@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#232323">
+
+  <TextView
+		android:id="@+id/title" 
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content"
+    	android:text="@string/title"
+    	android:onClick="textClick"
+    	android:clickable="true"
+    />
+	<EditText 
+		android:id="@+id/ipadress"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="192.168.0.13"
+	/>
+
+	<Button 
+		android:id="@+id/connect"
+		android:text="Connect"
+		android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="connectClick"
+	/>
+	
+	<TextView 
+		android:id="@+id/res"
+		android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+	/>
+	
+	<!--  -->
+    
+</LinearLayout>

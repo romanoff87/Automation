@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="lib" path="/home/romain/IDE/workspace-eclipse/Automation/jzlib-1.1.0.zip"/>
+	<classpathentry kind="lib" path="/home/romain/IDE/workspace-eclipse/Automation/jsch-0.1.45.jar"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

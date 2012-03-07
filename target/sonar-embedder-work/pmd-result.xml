@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.5" timestamp="2011-11-14T19:40:29.741">
+<file name="/home/romain/IDE/workspace-eclipse/Automation/src/home/diy/AutomationActivity.java">
+<violation beginline="20" endline="22" begincolumn="16" endcolumn="9" rule="UselessOverridingMethod" ruleset="Basic Rules" package="home.diy" class="AutomationActivity" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#UselessOverridingMethod" priority="3">
+Overriding method merely calls super
+</violation>
+</file>
+<file name="/home/romain/IDE/workspace-eclipse/Automation/src/home/diy/Ecouteur.java">
+<violation beginline="9" endline="9" begincolumn="16" endcolumn="52" rule="UnusedModifier" ruleset="Controversial Rules" package="home.diy" class="Ecouteur" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="11" endline="11" begincolumn="16" endcolumn="54" rule="UnusedModifier" ruleset="Controversial Rules" package="home.diy" class="Ecouteur" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="13" endline="13" begincolumn="16" endcolumn="55" rule="UnusedModifier" ruleset="Controversial Rules" package="home.diy" class="Ecouteur" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#UnusedModifier" priority="5">
+Avoid modifiers which are implied by the context
+</violation>
+</file>
+<file name="/home/romain/IDE/workspace-eclipse/Automation/src/home/diy/SshConnection.java">
+<violation beginline="37" endline="37" begincolumn="16" endcolumn="17" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="home.diy" class="SshConnection" method="doInBackground" variable="po" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'po'.
+</violation>
+<violation beginline="91" endline="91" begincolumn="25" endcolumn="43" rule="AvoidPrintStackTrace" ruleset="Java Logging Rules" package="home.diy" class="SshConnection" method="doInBackground" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#AvoidPrintStackTrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+</file>
+<file name="/home/romain/IDE/workspace-eclipse/Automation/src/home/diy/SshSystemInfo.java">
+<violation beginline="20" endline="20" begincolumn="30" endcolumn="40" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="home.diy" class="SshSystemInfo" variable="list_result" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'list_result'.
+</violation>
+<violation beginline="20" endline="20" begincolumn="17" endcolumn="41" rule="SingularField" ruleset="Design Rules" package="home.diy" class="SshSystemInfo" variable="list_result" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#SingularField" priority="4">
+Perhaps 'list_result' could be replaced by a local variable.
+</violation>
+<violation beginline="44" endline="44" begincolumn="21" endcolumn="33" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="home.diy" class="SshSystemInfo" method="doInBackground" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="48" endline="48" begincolumn="21" endcolumn="38" rule="SystemPrintln" ruleset="Java Logging Rules" package="home.diy" class="SshSystemInfo" method="doInBackground" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="57" endline="57" begincolumn="25" endcolumn="43" rule="AvoidPrintStackTrace" ruleset="Java Logging Rules" package="home.diy" class="SshSystemInfo" method="doInBackground" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#AvoidPrintStackTrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+<violation beginline="60" endline="60" begincolumn="25" endcolumn="43" rule="AvoidPrintStackTrace" ruleset="Java Logging Rules" package="home.diy" class="SshSystemInfo" method="doInBackground" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#AvoidPrintStackTrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+</file>
+<file name="/home/romain/IDE/workspace-eclipse/Automation/src/home/diy/SshUpdate.java">
+<violation beginline="58" endline="58" begincolumn="17" endcolumn="29" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="home.diy" class="SshUpdate" method="doInBackground" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="62" endline="62" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Java Logging Rules" package="home.diy" class="SshUpdate" method="doInBackground" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="3">
+System.out.print is used
+</violation>
+<violation beginline="72" endline="72" begincolumn="25" endcolumn="43" rule="AvoidPrintStackTrace" ruleset="Java Logging Rules" package="home.diy" class="SshUpdate" method="doInBackground" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#AvoidPrintStackTrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+<violation beginline="75" endline="75" begincolumn="25" endcolumn="43" rule="AvoidPrintStackTrace" ruleset="Java Logging Rules" package="home.diy" class="SshUpdate" method="doInBackground" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#AvoidPrintStackTrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+</file>
+<file name="/home/romain/IDE/workspace-eclipse/Automation/src/home/diy/StoredSession.java">
+<violation beginline="43" endline="43" begincolumn="25" endcolumn="43" rule="AvoidPrintStackTrace" ruleset="Java Logging Rules" package="home.diy" class="StoredSession" method="getSession" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#AvoidPrintStackTrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+</file>
+</pmd>

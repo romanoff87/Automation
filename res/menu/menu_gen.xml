@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item 
+        android:id="@+id/Home" 
+        android:title="Home"
+        android:icon="@drawable/home_icon"
+    	android:showAsAction="ifRoom">
+    </item>
+    
+    <item
+    	android:id="@+id/Reload"
+    	android:icon="@drawable/reload_icon"
+        android:title="Reload"
+        android:showAsAction="ifRoom"/>
+    
+    <item 
+        android:id="@+id/Preference" 
+        android:title="Preference"
+    	android:showAsAction="ifRoom">
+    </item>
+    
+</menu>

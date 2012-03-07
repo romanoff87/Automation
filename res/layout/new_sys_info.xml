@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="center" 
+    android:background="#232323">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1" 
+        android:layout_margin="5dp">
+
+        <TableRow
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:text="Host Name :"
+                android:textSize="10pt" />
+
+            <TextView
+                android:id="@+id/hostname"
+                android:gravity="right"
+                android:text="loading..."
+                android:textSize="10pt" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:text="Kernel Version :"
+                android:textSize="10pt" />
+
+            <TextView
+                android:id="@+id/kernelversion"
+                android:gravity="right"
+                android:text="loading..."
+                android:textSize="10pt" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:text="Uptime :"
+                android:textSize="10pt" />
+
+            <TextView
+                android:id="@+id/uptime"
+                android:gravity="right"
+                android:text="loading..."
+                android:textSize="10pt" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:text="Updates :"
+                android:textSize="10pt" />
+
+            <TextView
+                android:id="@+id/numberofupdate"
+                android:gravity="right"
+                android:text="loading..."
+                android:textSize="10pt" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:text="Security ones :"
+                android:textSize="10pt" />
+
+            <TextView
+                android:id="@+id/numberofsecurityupdate"
+                android:gravity="right"
+                android:text="loading..."
+                android:textSize="10pt" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:text="Disk Usage :"
+                android:textSize="10pt" />
+
+            <RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/diskspacebar"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:progress="0" />
+
+                <TextView
+                    android:id="@+id/totalspace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/diskspacebar"
+                    android:layout_below="@id/diskspacebar"
+                    android:text="loading..." />
+
+                <TextView
+                    android:id="@+id/freeofdisk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/diskspacebar"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/totalspace"
+                    android:text="free of :" />
+
+                <TextView
+                    android:id="@+id/freespace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/diskspacebar"
+                    android:layout_toLeftOf="@id/freeofdisk"
+                    android:text="loading..." />
+
+                <TextView
+                    android:id="@+id/usedspace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/diskspacebar"
+                    android:layout_below="@id/diskspacebar"
+                    android:text="loading..." />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/diskspacebar"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/usedspace"
+                    android:text="used" />
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ram Usage :"
+                android:textSize="10pt" />
+
+            <RelativeLayout >
+
+                <ProgressBar
+                    android:id="@+id/ramspacebar"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:progress="0" />
+
+                <TextView
+                    android:id="@+id/totalram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/ramspacebar"
+                    android:layout_below="@id/ramspacebar"
+                    android:text="loading..." />
+
+                <TextView
+                    android:id="@+id/usedram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/ramspacebar"
+                    android:layout_below="@id/ramspacebar"
+                    android:text="loading..." />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ramspacebar"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/usedram"
+                    android:text="used" />
+
+                <TextView
+                    android:id="@+id/freeofram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ramspacebar"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/totalram"
+                    android:text="free of :" />
+
+                <TextView
+                    android:id="@+id/freeram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ramspacebar"
+                    android:layout_toLeftOf="@id/freeofram"
+                    android:text="loading..." />
+            </RelativeLayout>
+        </TableRow>
+    </TableLayout>
+    
+        <TextView 
+            android:id="@+id/lastupdatetime"
+            android:text="loading..."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>

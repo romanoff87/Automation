@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, AutomationActivity! in the main</string>
+    <string name="app_name">Automation</string>
+    <string name="Serveur1">Alpha2</string>
+    <string name="TV">Xbmc</string>
+    <string-array name="Menu_list">
+        <item>Xbmc</item>
+        <item>Serveur</item>
+        <item>Éclairage</item>
+    </string-array>
+    <string name="title">Enter the IP adress of the serveur:</string>
+    <string name="test">pshjvbosnviosnrvihqsovuh&lt;sopuv</string>
+    <string name="head_menu_entry_1">Servers</string>
+    <string name="head_menu_entry_2">Xbmc</string>
+    <string name="Connection_info_Shared_Pref">Server1_info</string>
+    <string name="Login_server_1"/>
+</resources>

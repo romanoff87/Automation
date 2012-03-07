@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:clickable="true"
+    android:onClick="clickonsysinfo">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:gravity="center"
+        android:layout_marginBottom="5dp">
+        
+        <LinearLayout 
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginRight="50dp">
+            
+            <TextView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="Host Name :" 
+            	android:layout_marginRight="5dp"/>
+
+        	<TextView
+           		android:id="@+id/hostname"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="loading..." />
+            
+        </LinearLayout>
+
+        <LinearLayout 
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="50dp">
+
+        	<TextView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="Kernel Version :" 
+            	android:layout_marginRight="5dp"/>
+
+        	<TextView
+            	android:id="@+id/kernelversion"
+            	android:layout_width="wrap_content"
+           		android:layout_height="wrap_content"
+            	android:text="loading..." />
+        
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center" 
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uptime :" 
+            android:layout_marginRight="5dp"/>
+
+        <TextView
+            android:id="@+id/uptime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="loading..." />
+        
+        <TextView 
+            android:id="@+id/numberofupdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text=""/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="updates which"/>
+        
+        <TextView 
+            android:id="@+id/numberofsecurityupdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text=""/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="are security updates."/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disk Usage :"
+            android:layout_marginRight="5dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_marginRight="20dp">
+
+            <ProgressBar
+                android:id="@+id/diskspacebar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:progress="50" />
+
+
+
+            <TextView
+                android:id="@+id/totalspace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/diskspacebar"
+                android:layout_below="@id/diskspacebar"
+                android:text="loading..." />
+            
+            <TextView 
+                android:id="@+id/freeofdisk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/totalspace"
+                android:layout_below="@id/diskspacebar"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="free of :"/>
+            
+            <TextView
+                android:id="@+id/freespace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/diskspacebar"
+                android:layout_toLeftOf="@id/freeofdisk"
+                android:text="loading..." />
+
+            <TextView
+                android:id="@+id/usedspace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/diskspacebar"
+                android:layout_below="@id/diskspacebar"
+                android:text="loading..." />
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/usedspace"
+                android:layout_below="@id/diskspacebar"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="used"/>
+            
+        </RelativeLayout>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ram Usage :" />
+        
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="20dp">
+            
+        	<ProgressBar
+                android:id="@+id/ramspacebar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:progress="50" />
+            
+            <TextView                 
+                android:id="@+id/totalram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ramspacebar"
+                android:layout_alignRight="@id/ramspacebar"
+                android:text="loading..."/>
+            
+            <TextView 
+                android:id="@+id/usedram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ramspacebar"
+                android:layout_alignLeft="@id/ramspacebar"
+                android:text="loading..."/>
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/usedram"
+                android:layout_below="@id/ramspacebar"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="used"/>
+            
+            <TextView 
+                android:id="@+id/freeofram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/totalram"
+                android:layout_below="@id/ramspacebar"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="free of :"/>
+            
+              <TextView
+                android:id="@+id/freeram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ramspacebar"
+                android:layout_toLeftOf="@id/freeofram"
+                android:text="loading..." />
+            
+       	</RelativeLayout>
+          	
+    </LinearLayout>
+
+</LinearLayout>
