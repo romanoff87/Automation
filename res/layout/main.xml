@@ -1,47 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    android:orientation="horizontal" >
 
-<LinearLayout 
-    xmlns:android="http://schemas.android.com/apk/res/android"
-	android:id="@+id/mainlayout"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="horizontal"
-    android:gravity="center">
-    
-    <FrameLayout
-        android:id="@+id/Preference_frame"
-        android:layout_width="0dp"
-        android:layout_height="fill_parent"
-         />
-	
-	<TextView
-	android:id="@+id/entry1" 
-    android:layout_width="wrap_content" 
-    android:layout_height="wrap_content"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="5dp"
-    android:layout_marginRight="20dp"
-    android:layout_marginLeft="20dp"
-    android:text="@string/Serveur1"
-    android:textSize="20pt"
-    android:clickable="true"
-    android:onClick="ServerButtonClick"
-    android:background="@drawable/borderbackground"
-    />
+    <RelativeLayout
+        android:id="@+id/main_absolute"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical" >
 
-    <TextView
-    android:id="@+id/entry2"
-    android:layout_width="wrap_content" 
-    android:layout_height="wrap_content"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="5dp"
-    android:layout_marginRight="20dp"
-    android:layout_marginLeft="20dp"
-    android:text="@string/TV"
-    android:textSize="20pt"
-    android:clickable="true"
-    android:onClick="TVButtonClick"
-    android:background="@drawable/borderbackground"
-    />
+        <FrameLayout
+            android:id="@+id/Preference_frame"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/mainlayout" />
+
+        <ImageButton
+            android:id="@+id/preference_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/Preference_frame"
+            android:background="#33b5e5"
+            android:onClick="onPreferenceArrowClick"
+            android:src="@drawable/right_arrow" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/preference_button"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/entry1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:onClick="ServerButtonClick"
+                android:text="@string/server_name"
+                android:textSize="50pt" />
+
+            <TextView
+                android:id="@+id/login_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Login"
+                android:textSize="20pt" />
+
+            <TextView
+                android:id="@+id/ip_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:text="IP"
+                android:textSize="20pt" />
+            
+        </LinearLayout>
+        
+    </RelativeLayout>
 
 </LinearLayout>

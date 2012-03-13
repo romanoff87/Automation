@@ -1,19 +1,18 @@
 package home.diy;
 
 import home.diy.UI.RetreiveActionList;
-import home.diy.UI.System_Info;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.os.AsyncTask;
+
 import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelExec;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
-
-import android.os.AsyncTask;
 
 public class SshListActions extends AsyncTask<Session, String, List<String>>{
 	
@@ -24,10 +23,12 @@ public class SshListActions extends AsyncTask<Session, String, List<String>>{
 	protected List<String> doInBackground(Session... sessions) {
 		Channel channel;
 		actionsList=new ArrayList<String>();
+		
 		try {
 		// nom de l'hote, version noyeau, disk, Total, used, free,
 		// percentage, num secu updates, num updates, load average
 			String command="cd ~/.Automation&&find *.sh";
+			String a = null;
 			
 			channel = sessions[0].openChannel("exec");
 			((ChannelExec) channel).setCommand(command);
@@ -62,11 +63,11 @@ public class SshListActions extends AsyncTask<Session, String, List<String>>{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return a;
+		return actionsList;
 	}
 	
 	protected void onPostExecute(String result) {
-		ecouteur.publishStringResult(result);
+		//ecouteur.publishStringResult(result);
 	}
 	
 	public void addobserver(RetreiveActionList b) {

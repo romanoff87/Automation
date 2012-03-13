@@ -2,13 +2,11 @@ package home.diy;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Properties;
 
 import android.os.AsyncTask;
 
 import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelExec;
-import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 

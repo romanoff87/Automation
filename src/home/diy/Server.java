@@ -1,7 +1,10 @@
 package home.diy;
 
+import android.app.Fragment;
+import android.content.SharedPreferences;
 
-public class Server{
+
+public class Server extends Fragment{
 	
 	private String servername,ipaddress,login,password;
 	private int port;
@@ -11,8 +14,12 @@ public class Server{
 	public static final String SERVER_IP="ip";
 	public static final String SERVER_PORT="port";
 	
+	private SharedPreferences settings;
+	
 	public Server(String name){
 		servername=name;
+		settings = getActivity().getSharedPreferences(
+				Server.CONNECTION_INFO_SERVER_1, 0);
 	}
 	
 	public Server(String name,String ip, String log, String pass, int port){
@@ -32,7 +39,7 @@ public class Server{
 	}
 
 	public String getIpaddress() {
-		return ipaddress;
+		return settings.getString(Server.SERVER_IP, null);
 	}
 
 	public void setIpaddress(String ipaddress) {
@@ -40,7 +47,7 @@ public class Server{
 	}
 
 	public String getLogin() {
-		return login;
+		return settings.getString(Server.SERVER_LOGIN, null);
 	}
 
 	public void setLogin(String login) {
@@ -48,7 +55,7 @@ public class Server{
 	}
 
 	public String getPassword() {
-		return password;
+		return settings.getString(Server.SERVER_PASS, null);
 	}
 
 	public void setPassword(String password) {
@@ -56,7 +63,7 @@ public class Server{
 	}
 
 	public int getPort() {
-		return port;
+		return Integer.parseInt(settings.getString(Server.SERVER_PORT, null)); 
 	}
 
 	public void setPort(int port) {

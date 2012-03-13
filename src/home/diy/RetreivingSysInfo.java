@@ -1,18 +1,12 @@
 package home.diy;
 
-import home.diy.UI.System_Info;
-
-import java.util.List;
-
-import com.jcraft.jsch.Session;
-
 import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.jcraft.jsch.Session;
 
 public class RetreivingSysInfo extends Fragment implements Ecouteur{
 	
@@ -49,18 +43,24 @@ public class RetreivingSysInfo extends Fragment implements Ecouteur{
 		
 	}
 
-	@Override
+	/*@Override
 	public void publishStringResult(String result) {
 		// TODO Auto-generated method stub
 		
-	}
+	}*/
 
-	@Override
+	/*@Override
 	public void publishListResult(List<String> result) {
 		FragmentManager fm=getFragmentManager();
 		FragmentTransaction ft=fm.beginTransaction();
 		ft.replace(R.id.System_Info, new System_Info(result,session),"sys_info_frag");
 		ft.commit();
+	}*/
+
+	@Override
+	public void publishListResult(Object result) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

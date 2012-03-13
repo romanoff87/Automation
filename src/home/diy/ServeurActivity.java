@@ -3,10 +3,6 @@ package home.diy;
 import home.diy.UI.Menu_vertical;
 import home.diy.UI.RetreiveActionList;
 import home.diy.UI.System_Info;
-import home.diy.Server;
-
-import java.util.List;
-
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -24,7 +20,6 @@ import com.jcraft.jsch.Session;
 
 public class ServeurActivity extends Activity implements Ecouteur {
 
-	private TextView t;
 	private ProgressDialog dialog;
 	private FragmentManager fragmentManager;
 	private FragmentTransaction fragmentTransaction;
@@ -127,15 +122,9 @@ public class ServeurActivity extends Activity implements Ecouteur {
 	}
 
 	@Override
-	public void publishStringResult(String result) {
+	public void publishListResult(Object result) {
 		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void publishListResult(List<String> result) {
-		// TODO Auto-generated method stub
-
+		
 	}
 
 }

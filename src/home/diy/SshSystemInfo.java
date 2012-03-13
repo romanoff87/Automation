@@ -1,7 +1,5 @@
 package home.diy;
 
-import home.diy.UI.System_Info;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;

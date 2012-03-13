@@ -2,7 +2,7 @@
 <resources>
     <string name="hello">Hello World, AutomationActivity! in the main</string>
     <string name="app_name">Automation</string>
-    <string name="Serveur1">Alpha2</string>
+    <string name="server_name">Media Center</string>
     <string name="TV">Xbmc</string>
     <string-array name="Menu_list">
         <item>Xbmc</item>

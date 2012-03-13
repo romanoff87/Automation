@@ -1,20 +1,15 @@
 package home.diy.UI;
 
-import java.util.List;
-
-import com.jcraft.jsch.Session;
-
 import home.diy.Ecouteur;
-import home.diy.ListOfAction;
 import home.diy.R;
 import home.diy.SshListActions;
 import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.jcraft.jsch.Session;
 
 public class RetreiveActionList extends Fragment implements Ecouteur{
 	
@@ -50,7 +45,7 @@ public class RetreiveActionList extends Fragment implements Ecouteur{
 		
 	}
 
-	@Override
+	/*@Override
 	public void publishStringResult(String result) {
 		FragmentManager fragmentManager=getFragmentManager();
 		FragmentTransaction ft=fragmentManager.beginTransaction();
@@ -60,6 +55,12 @@ public class RetreiveActionList extends Fragment implements Ecouteur{
 
 	@Override
 	public void publishListResult(List<String> result) {
+		// TODO Auto-generated method stub
+		
+	}*/
+
+	@Override
+	public void publishListResult(Object result) {
 		// TODO Auto-generated method stub
 		
 	}

@@ -1,7 +1,5 @@
 package home.diy;
 
-import java.util.List;
-
 import com.jcraft.jsch.Session;
 
 public interface Ecouteur {

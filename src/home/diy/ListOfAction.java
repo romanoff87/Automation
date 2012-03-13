@@ -1,14 +1,9 @@
 package home.diy;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import android.app.ListFragment;
 import android.os.Bundle;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
 
 public class ListOfAction extends ListFragment {
 	

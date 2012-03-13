@@ -1,5 +1,7 @@
 package home.diy.UI;
 
+import home.diy.R;
+import home.diy.Server;
 import android.app.DialogFragment;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
@@ -11,8 +13,6 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import home.diy.R;
-import home.diy.Server;
 
 public class Mydialog extends DialogFragment implements OnClickListener {
 
@@ -31,8 +31,6 @@ public class Mydialog extends DialogFragment implements OnClickListener {
 		Button valid = (Button) v.findViewById(
 				R.id.valid_param_button);
 		valid.setOnClickListener(this);
-		Button annuler =(Button)v.findViewById(R.id.Annuler_param_button);
-		annuler.setOnClickListener(this);
 
 		SharedPreferences settings = getActivity().getSharedPreferences(
 				Server.CONNECTION_INFO_SERVER_1, 0);
@@ -81,14 +79,6 @@ public class Mydialog extends DialogFragment implements OnClickListener {
 			// Commit the edits!
 			editor.commit();
 
-			if (prev != null) {
-				ft.remove(prev);
-			}
-			ft.addToBackStack(null);
-			ft.commit();
-			break;
-
-		case R.id.Annuler_param_button:
 			if (prev != null) {
 				ft.remove(prev);
 			}

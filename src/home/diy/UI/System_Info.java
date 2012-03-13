@@ -7,16 +7,13 @@ import home.diy.SshSystemInfo;
 import home.diy.UpdateTime;
 
 import java.util.List;
-import java.util.Timer;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
-import android.text.format.Time;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,7 +26,6 @@ public class System_Info extends Fragment implements Ecouteur {
 
 	private List<String> System_information;
 	private Session session;
-	private SshSystemInfo sysinfo;
 	private long lastupdatetime;
 	private UpdateTime updatetimetask;
 	private Handler shechuleforupdatetime;
@@ -117,11 +113,11 @@ public class System_Info extends Fragment implements Ecouteur {
 		
 	}
 
-	@Override
+	/*@Override
 	public void publishStringResult(String result) {
 		TextView t = (TextView) getActivity().findViewById(R.id.hostname);
 		t.setText(result);
-	}
+	}*/
 
 	@Override
 	public void publishedResult(Session result) {
@@ -135,8 +131,14 @@ public class System_Info extends Fragment implements Ecouteur {
 
 	}
 
-	@Override
+	/*@Override
 	public void publishListResult(List<String> result) {
+		
+	}*/
+
+	@Override
+	public void publishListResult(Object result) {
+		// TODO Auto-generated method stub
 		
 	}
 }
