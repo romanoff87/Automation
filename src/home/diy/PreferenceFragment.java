@@ -93,7 +93,7 @@ public class PreferenceFragment extends Fragment implements OnClickListener{
 			// Commit the edits!
 			editor.commit();
 			
-			((AutomationActivity)getActivity()).onPreferenceArrowClick(v);
+			((AutomationActivity)getActivity()).onClick(getActivity().findViewById(R.id.preference_button));
 			
 			break;
 			

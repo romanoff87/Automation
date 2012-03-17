@@ -24,7 +24,6 @@
             android:layout_height="match_parent"
             android:layout_toRightOf="@id/Preference_frame"
             android:background="#33b5e5"
-            android:onClick="onPreferenceArrowClick"
             android:src="@drawable/right_arrow" />
 
         <LinearLayout
@@ -70,6 +69,16 @@
                 android:textSize="20pt" />
             
         </LinearLayout>
+
+       	<ImageButton
+       	    android:id="@+id/connection_button"
+       	    android:layout_width="wrap_content"
+       	    android:layout_height="match_parent"
+       	    android:layout_alignParentRight="true"
+       	    android:layout_centerInParent="true"
+       	    android:padding="20dp"
+       	    android:background="#33b5e5"
+       	    android:src="@drawable/connection_arrow" />
         
     </RelativeLayout>
 
