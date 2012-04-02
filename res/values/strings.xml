@@ -10,10 +10,10 @@
         <item>Éclairage</item>
     </string-array>
     <string name="title">Enter the IP adress of the serveur:</string>
-    <string name="test">pshjvbosnviosnrvihqsovuh&lt;sopuv</string>
     <string name="head_menu_entry_1">Servers</string>
     <string name="head_menu_entry_2">Xbmc</string>
     <string name="Connection_info_Shared_Pref">Server1_info</string>
     <string name="Login_server_1"/>
     <string name="missing_connection_parameter">The connection is impossible because of some connection parameters are missing. Open the preference view.</string>
+    <string name="ckecking_traget_availability">Checking if the target is available...</string>
 </resources>

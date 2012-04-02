@@ -14,7 +14,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 
 import com.jcraft.jsch.Session;
 
@@ -42,17 +41,18 @@ public class ServeurActivity extends Activity implements Ecouteur {
 	@Override
 	public void onResume() {
 		super.onResume();
-		SharedPreferences connectinfo = getSharedPreferences(
+		SharedPreferences connectionpref = getSharedPreferences(
 				Server.CONNECTION_INFO_SERVER_1, MODE_PRIVATE);
-		String ip = connectinfo.getString(Server.SERVER_IP, null);
-		String login = connectinfo.getString(Server.SERVER_LOGIN, null);
-		String pass = connectinfo.getString(Server.SERVER_PASS, null);
-		String port = connectinfo.getString(Server.SERVER_PORT, null);
-		connect = (SshConnection) new SshConnection();
+		String ipaddress = connectionpref.getString(Server.SERVER_IP, null);
+		String login = connectionpref.getString(Server.SERVER_LOGIN, null);
+		String pass = connectionpref.getString(Server.SERVER_PASS, null);
+		String port = connectionpref.getString(Server.SERVER_PORT, null);
+		
+		SshConnection connect = (SshConnection) new SshConnection();
 		connect.addobserver(this);
-		connect.execute(ip, port, login, pass);
-		dialog = ProgressDialog.show(ServeurActivity.this, "",
-				"Loading. Please wait...", true);
+		connect.execute(ipaddress, port, login, pass);
+		dialog = ProgressDialog.show(ServeurActivity.this, "", 
+                					"Loading. Please wait...", true);
 	}
 
 	@Override
@@ -72,10 +72,6 @@ public class ServeurActivity extends Activity implements Ecouteur {
 			fragmentTransaction.add(R.id.frame_menu, new RetreiveActionList(
 					session));
 			fragmentTransaction.commit();
-		} else {
-			Intent intent = new Intent(this, AutomationActivity.class);
-			startActivity(intent);
-			finish();
 		}
 	}
 

@@ -3,7 +3,6 @@ package home.diy.UI;
 import home.diy.Ecouteur;
 import home.diy.R;
 import home.diy.RetreivingSysInfo;
-import home.diy.SshSystemInfo;
 import home.diy.UpdateTime;
 
 import java.util.List;
